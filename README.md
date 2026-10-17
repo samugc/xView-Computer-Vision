@@ -6,6 +6,16 @@ Satellite image classification on **xView** with a fine-tuned **Swin Transformer
 
 Originally developed as MSc Computer Vision coursework and later refactored for reproducibility and stricter evaluation.
 
+## Results at a glance
+
+| Model | Split | Metric | Result |
+|---|---|---:|---:|
+| Swin-Base + TTA | validation | accuracy | **83.20%** |
+
+The historical run used **16,871 training images** and **1,875 validation images** across 13 classes.
+
+The **83.20% is a validation result, not a held-out test score**. The original checkpoint and per-image predictions were not preserved, so it is reported as historical evidence rather than as a result reproduced by the cleaned repository.
+
 ## Highlights
 
 - 13-class satellite crop classification.
@@ -15,16 +25,6 @@ Originally developed as MSc Computer Vision coursework and later refactored for 
 - Four-view test-time augmentation (TTA).
 - Prediction/label alignment by image ID and filename.
 - Reproducible split manifests and lightweight integrity tests.
-
-## Historical result
-
-| Model | Split | Metric | Result |
-|---|---|---:|---:|
-| Swin-Base + TTA | validation | accuracy | **83.20%** |
-
-The historical run used 16,871 training images and 1,875 validation images.
-
-The 83.20% figure is a **validation result**, not a held-out test score. The original checkpoint and per-image predictions were not preserved, so the score is reported as historical evidence rather than as a result reproduced by the cleaned repository.
 
 ## Pipeline
 
